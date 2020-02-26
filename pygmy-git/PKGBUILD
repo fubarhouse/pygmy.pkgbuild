@@ -1,0 +1,27 @@
+# Maintainer: Karl Hepworth <karl.hepworth@gmail.com>
+pkgname=pygmy-go
+pkgver=master
+pkgrel=1
+pkgdesc="Amazee.io's local docker development tool"
+arch=(i686 x86_64)
+url="https://github.com/fubarhouse/pygmy-go"
+license=('MIT')
+makedepends=(git go)
+optdepends=()
+source=("${pkgname}-${pkgver}.tar.gz::https://github.com/fubarhouse/pygmy-go/archive/master.zip")
+source=(git://github.com/fubarhouse/pygmy-go.git)
+noextract=()
+sha512sums=('SKIP')
+
+build(){
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  export GOPATH="${srcdir}"
+  go mod vendor
+  go build .
+}
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+  sudo chmod o+rwx pygmy-go
+  sudo mv pygmy-go /usr/bin/pygmy
+}
