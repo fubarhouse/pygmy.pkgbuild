@@ -6,7 +6,7 @@ pkgdesc="Amazee.io's local docker development tool"
 arch=(any)
 url="https://github.com/fubarhouse/pygmy-go"
 license=('MIT')
-makedepends=(git go)
+makedepends=('go-pie')
 source=(git://github.com/fubarhouse/pygmy-go.git)
 sha512sums=('SKIP')
 
