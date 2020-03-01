@@ -1,5 +1,5 @@
 # Maintainer: Karl Hepworth <karl.hepworth@gmail.com>
-pkgname=pygmy-go
+pkgname=pygmy-go-git
 pkgver=master
 pkgrel=1
 pkgdesc="Amazee.io's local docker development tool"
