@@ -1,4 +1,4 @@
-# Maintainer: Karl Hepworth <karl.hepworth@gmail.com>
+# Maintainer: fubarhouse
 pkgname=pygmy-go-git
 pkgver=master
 pkgrel=1
