@@ -10,8 +10,6 @@ RUN pacman -Sy
 RUN pacman --noconfirm -Sy base-devel
 
 # Build application
-RUN chmod -R 777 /app/pygmy-go
-RUN chmod -R 777 /app/pygmy-go-git
 RUN cd pygmy-go-git && sudo -u nobody makepkg -Si
 
 FROM archlinux
