@@ -6,7 +6,7 @@ COPY . /app
 
 # Prepare system
 RUN pacman -Sy
-RUN pacman --noconfirm -Sy base-devel
+RUN pacman --noconfirm -Sy base-devel go-pie
 
 # Build application
 RUN chmod -R 777 /app
