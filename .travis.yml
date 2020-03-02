@@ -1,0 +1,17 @@
+---
+language: go
+go:
+  - "1.13.4"
+
+matrix:
+  include:
+
+    - os: linux
+      services: docker
+      script:
+        - docker build -t archtest .
+        - docker run -it -v $PWD:/app archtest /app/build.sh
+        - docker rm archtest
+
+notifications:
+  slack: fubarhouse:upHoIzmKb4ikkBOt2cOwgKXY
