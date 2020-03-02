@@ -12,7 +12,6 @@ matrix:
         - chmod -R 777 .
         - docker build -t archtest .
         - docker run -it -v $PWD:/app archtest /app/build.sh
-        - docker image rm archtest
 
 notifications:
   slack: fubarhouse:upHoIzmKb4ikkBOt2cOwgKXY
