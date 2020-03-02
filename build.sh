@@ -3,6 +3,8 @@
 
 # Set working directory
 cd /app || exit
+sudo chmod -R 777 /app/pygmy-go
+sudo chmod -R 777 /app/pygmy-go-git
 
 # Update
 pacman -Sy
