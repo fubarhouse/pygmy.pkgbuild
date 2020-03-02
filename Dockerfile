@@ -10,8 +10,10 @@ RUN pacman --noconfirm -Sy base-devel
 
 # Build application
 RUN chmod -R 777 /app
-RUN cd /app/pygmy-go && sudo -u nobody makepkg -Si && cd ..
-RUN cd /app/pygmy-go-git && sudo -u nobody makepkg -Si
+RUN cd /app/pygmy-go && \
+    sudo -u nobody makepkg
+RUN cd /app/pygmy-go-git && \
+    sudo -u nobody makepkg -Si
 
 FROM archlinux
 COPY --from=builder /app /app
