@@ -8,7 +8,7 @@ cd /app || exit
 pacman -Sy
 
 # Install dependencies
-pacman -Sy --noconfirm base-devel go-pie
+pacman -Sy --noconfirm base-devel
 
 # Build pygmy-go-git
 cd /app/pygmy-go-git || exit
