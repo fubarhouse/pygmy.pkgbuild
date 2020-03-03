@@ -5,8 +5,14 @@ RUN mkdir /app
 COPY . /app
 
 # Prepare system
-RUN pacman -Sy
+RUN pacman -Syu --noconfirm
 RUN pacman --noconfirm -Sy base-devel
+RUN pacman --noconfirm -Sy git go-pie
+
+RUN mkdir /go
+RUN chmod -R 777 /go
+RUN mkdir /.cache
+RUN chmod -R 777 /.cache
 
 # Build application
 RUN chmod -R 777 /app
