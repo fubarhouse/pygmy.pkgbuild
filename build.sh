@@ -14,8 +14,8 @@ pacman -Sy --noconfirm base-devel git go-pie
 cd /app/pygmy-go-git || exit
 sudo -u nobody makepkg -Si
 
-# Build pygmy-go
-cd /app/pygmy-go || exit
+# Build pygmy-go-bin
+cd /app/pygmy-go-bin || exit
 sudo -u nobody makepkg -Si
 
 # Cleanup

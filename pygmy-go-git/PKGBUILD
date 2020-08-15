@@ -1,8 +1,8 @@
 # Maintainer: fubarhouse
 pkgname=pygmy-go-git
-conflicts=(pygmy-go)
+conflicts=(pygmy-go-bin)
 provides=(pygmy-go)
-pkgver=master
+pkgver=main
 pkgrel=1
 pkgdesc="Amazee.io's local docker development tool"
 arch=('x86_64')

@@ -16,11 +16,12 @@ RUN chmod -R 777 /.cache
 
 # Build application
 RUN chmod -R 777 /app
-RUN cd /app/pygmy-go && \
+RUN cd /app/pygmy-go-bin && \
     sudo -u nobody makepkg
 RUN cd /app/pygmy-go-git && \
     sudo -u nobody makepkg -Si
 
+# Produce result
 FROM archlinux
 COPY --from=builder /app /app
 WORKDIR /app
