@@ -16,8 +16,6 @@ jobs:
           submodules: true
       - name: Build builder image
         run: docker build -t archtest .
-      - name: Create artifact folder
-        run: mkdir app
       - name: Install applications in isolation
         run: docker run -t -v $PWD:/app archtest /app/build.sh
 
