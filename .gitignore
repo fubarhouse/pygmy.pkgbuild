@@ -2,3 +2,5 @@
 /.idea/*
 /*/src
 /*/pygmy-*
+pygmy-go-*/pkg/*
+pygmy-go-*/src/*
