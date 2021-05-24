@@ -1,7 +1,6 @@
 [submodule "pygmy-go-bin"]
 	path = pygmy-go-bin
 	url = https://aur@aur.archlinux.org/pygmy-go-bin.git
-
 [submodule "pygmy-go-git"]
 	path = pygmy-go-git
 	url = https://aur@aur.archlinux.org/pygmy-go-git.git
