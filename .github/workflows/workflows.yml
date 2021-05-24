@@ -14,8 +14,6 @@ jobs:
       - name: Install applications in isolation
         run: docker run -it -v $PWD:/app archtest /app/build.sh
 
-on: push
-jobs:
   slackNotification:
     name: Slack Notification
     runs-on: ubuntu-latest
