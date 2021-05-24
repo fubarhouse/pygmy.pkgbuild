@@ -1,0 +1,29 @@
+---
+
+name: pygmy
+on:
+  push:
+  pull_request:
+    schedule:
+    - cron: '0 0 * * *'
+jobs:
+  pygmyBuild:
+    name: Build Pipeline
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build builder image
+        run: docker build -t archtest .
+      - name: Install applications in isolation
+        run: docker run -t -v $PWD:/app archtest /app/build.sh
+
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_USERNAME: pygmy-bot
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
