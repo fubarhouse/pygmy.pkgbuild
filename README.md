@@ -1,6 +1,6 @@
 # Pygmy AUR
 
-[![TravisCI](https://travis-ci.org/fubarhouse/pygmy-go.pkgbuild.svg?branch=main)](https://travis-ci.org/fubarhouse/pygmy-go.pkgbuild)
+[![Build Status](https://github.com/fubarhouse/pygmy-go.pkgbuild/actions/workflows/workflows.yml/badge.svg)](https://github.com/fubarhouse/pygmy-go.pkgbuild/actions/workflows/workflows.yml)
 
 This repository serves as a source for an installer for [Pygmy](https://github.com/fubarhouse/pygmy-go) which is available to Linux distributions which are derived from Arch - such as Manjaro.
 
