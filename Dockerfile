@@ -18,10 +18,10 @@ RUN chmod -R 777 /.cache
 RUN chmod -R 777 /app
 # Run One - Pygmy-Go-Bin
 RUN cd /app/pygmy-go-bin && \
-    sudo -u nobody makepkg -f \
+    sudo -u nobody makepkg -f
 # Run Two - Pygmy-Go-Git
 RUN cd /app/pygmy-go-git && \
-    sudo -u nobody makepkg -Sfi \
+    sudo -u nobody makepkg -Sfi
 # Run Three - Pygmy-Legacy
 RUN cd /app/pygmy-legacy && \
     sudo -u nobody makepkg -Si
