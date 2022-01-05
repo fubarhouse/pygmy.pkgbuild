@@ -18,5 +18,9 @@ sudo -u nobody makepkg -Sfi
 cd /app/pygmy-go-bin || exit
 sudo -u nobody makepkg -Sfi
 
+# Build pygmy-legacy
+cd /app/pygmy-legacy || exit
+sudo -u nobody makepkg -Si
+
 # Cleanup
 pacman -Sc --noconfirm
