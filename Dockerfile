@@ -7,7 +7,7 @@ COPY . /app
 # Prepare system
 RUN pacman -Syu --noconfirm
 RUN pacman --noconfirm -Sy base-devel
-RUN pacman --noconfirm -Sy git go-pie ruby2.6
+RUN pacman --noconfirm -Sy git go-pie
 
 RUN mkdir /go
 RUN chmod -R 777 /go
