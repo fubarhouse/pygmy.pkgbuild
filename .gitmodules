@@ -4,3 +4,6 @@
 [submodule "pygmy-go-git"]
 	path = pygmy-go-git
 	url = https://aur@aur.archlinux.org/pygmy-go-git.git
+[submodule "pygmy-legacy"]
+	path = pygmy-legacy
+	url = https://aur.archlinux.org/pygmy-legacy.git
