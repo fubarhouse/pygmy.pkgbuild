@@ -1,9 +1,12 @@
-[submodule "pygmy-go-bin"]
-	path = pygmy-go-bin
-	url = https://aur@aur.archlinux.org/pygmy-go-bin.git
-[submodule "pygmy-go-git"]
-	path = pygmy-go-git
-	url = https://aur@aur.archlinux.org/pygmy-go-git.git
+[submodule "pygmy"]
+	path = pygmy
+	url = https://aur.archlinux.org/pygmy.git
+[submodule "pygmy-bin"]
+	path = pygmy-bin
+	url = https://aur.archlinux.org/pygmy-bin.git
+[submodule "pygmy-git"]
+	path = pygmy-git
+	url = https://aur.archlinux.org/pygmy-git.git
 [submodule "pygmy-legacy"]
 	path = pygmy-legacy
 	url = https://aur.archlinux.org/pygmy-legacy.git

@@ -7,7 +7,7 @@ COPY . /app
 # Prepare system
 RUN pacman -Syu --noconfirm
 RUN pacman --noconfirm -Sy base-devel
-RUN pacman --noconfirm -Sy git go-pie
+RUN pacman --noconfirm -Sy git go-pie pacman-contrib ruby2.6
 
 RUN mkdir /go
 RUN chmod -R 777 /go
@@ -16,13 +16,16 @@ RUN chmod -R 777 /.cache
 
 # Build application
 RUN chmod -R 777 /app
-# Run One - Pygmy-Go-Bin
-RUN cd /app/pygmy-go-bin && \
+# Run One - Pygmy
+RUN cd /app/pygmy && \
     sudo -u nobody makepkg -f
-# Run Two - Pygmy-Go-Git
-RUN cd /app/pygmy-go-git && \
+# Run Two - Pygmy-Bin
+RUN cd /app/pygmy-bin && \
+    sudo -u nobody makepkg -f
+# Run Three - Pygmy-Git
+RUN cd /app/pygmy-git && \
     sudo -u nobody makepkg -Sfi
-# Run Three - Pygmy-Legacy
+# Run Four - Pygmy-Legacy
 RUN cd /app/pygmy-legacy && \
     sudo -u nobody makepkg -Si
 

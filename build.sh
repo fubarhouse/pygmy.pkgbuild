@@ -8,14 +8,18 @@ cd /app || exit
 pacman -Sy
 
 # Install dependencies
-pacman -Sy --noconfirm base-devel git go-pie
+pacman -Sy --noconfirm base-devel git go-pie pacman-contrib ruby2.6
 
-# Build pygmy-go-git
-cd /app/pygmy-go-git || exit
+# Build pygmy-git
+cd /app/pygmy || exit
 sudo -u nobody makepkg -Sfi
 
-# Build pygmy-go-bin
-cd /app/pygmy-go-bin || exit
+# Build pygmy-bin
+cd /app/pygmy-bin || exit
+sudo -u nobody makepkg -Sfi
+
+# Build pygmy-git
+cd /app/pygmy-git || exit
 sudo -u nobody makepkg -Sfi
 
 # Build pygmy-legacy
