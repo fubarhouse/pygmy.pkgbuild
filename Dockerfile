@@ -26,8 +26,8 @@ RUN cd /app/pygmy-bin && \
 RUN cd /app/pygmy-git && \
     sudo -u nobody makepkg -f
 # Run Four - Pygmy-Legacy
-RUN cd /app/pygmy-legacy && \
-    sudo -u nobody makepkg -f
+#RUN cd /app/pygmy-legacy && \
+#    sudo -u nobody makepkg -f
 
 # Produce result
 FROM archlinux

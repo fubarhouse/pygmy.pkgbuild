@@ -23,8 +23,8 @@ cd /app/pygmy-git || exit
 sudo -u nobody makepkg -Sfi
 
 # Build pygmy-legacy
-cd /app/pygmy-legacy || exit
-sudo -u nobody makepkg -Si
+#cd /app/pygmy-legacy || exit
+#sudo -u nobody makepkg -Si
 
 # Cleanup
 pacman -Sc --noconfirm
