@@ -24,10 +24,10 @@ RUN cd /app/pygmy-bin && \
     sudo -u nobody makepkg -f
 # Run Three - Pygmy-Git
 RUN cd /app/pygmy-git && \
-    sudo -u nobody makepkg -fi
+    sudo -u nobody makepkg -f
 # Run Four - Pygmy-Legacy
 RUN cd /app/pygmy-legacy && \
-    sudo -u nobody makepkg -i
+    sudo -u nobody makepkg -f
 
 # Produce result
 FROM archlinux
