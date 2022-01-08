@@ -24,8 +24,11 @@ RUN cd /app/pygmy-bin && \
     sudo -u nobody makepkg -f
 # Run Three - Pygmy-Git
 RUN cd /app/pygmy-git && \
+    sudo -u nobody makepkg -f \
+# Run Four - Pygmy-Git
+RUN cd /app/pygmy-static-bin && \
     sudo -u nobody makepkg -f
-# Run Four - Pygmy-Legacy
+# Run Five - Pygmy-Legacy
 #RUN cd /app/pygmy-legacy && \
 #    sudo -u nobody makepkg -f
 

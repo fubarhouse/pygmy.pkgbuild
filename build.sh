@@ -22,6 +22,10 @@ sudo -u nobody makepkg -Sfi
 cd /app/pygmy-git || exit
 sudo -u nobody makepkg -Sfi
 
+# Build pygmy-static-bin
+cd /app/pygmy-static-bin || exit
+sudo -u nobody makepkg -Sfi
+
 # Build pygmy-legacy
 #cd /app/pygmy-legacy || exit
 #sudo -u nobody makepkg -Si

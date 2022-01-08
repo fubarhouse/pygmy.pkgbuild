@@ -15,4 +15,4 @@ docker build -t archtest .
 docker run -it -v $PWD:/app archtest /app/build.sh
 ```
 
-Alternatively, in  due time you will be able to run `pacman -S pygmy-go` or `pacman -S pygmy-go-git`, or use any abstraction utility, such as yay - to do so for you.
+Alternatively, in  due time you will be able to run `pacman -S pygmy` or `pacman -S pygmy-git`, or use any abstraction utility, such as yay - to do so for you.
