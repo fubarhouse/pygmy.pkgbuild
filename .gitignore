@@ -1,6 +1,4 @@
 /.code/*
 /.idea/*
+/*/pkg
 /*/src
-/*/pygmy-*
-pygmy-go-*/pkg/*
-pygmy-go-*/src/*

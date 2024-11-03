@@ -7,9 +7,6 @@
 [submodule "pygmy-git"]
 	path = pygmy-git
 	url = https://aur.archlinux.org/pygmy-git.git
-[submodule "pygmy-legacy"]
-	path = pygmy-legacy
-	url = https://aur.archlinux.org/pygmy-legacy.git
 [submodule "pygmy-static-bin"]
 	path = pygmy-static-bin
 	url = https://aur.archlinux.org/pygmy-static-bin.git
