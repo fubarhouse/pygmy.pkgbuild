@@ -1,4 +1,5 @@
-/.code/*
-/.idea/*
-/*/pkg
-/*/src
+.code/*
+.idea/*
+*/pkg
+*/src
+*/pygmy*
