@@ -5,10 +5,15 @@ RUN mkdir -p /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild
 ADD . /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild
 RUN chmod -R 777 /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild
 
+RUN mkdir /.gem
+RUN chmod 777 /.gem 
+
 # Prepare system
 RUN pacman -Syu --noconfirm
 RUN pacman --noconfirm -Sy base-devel
 RUN pacman --noconfirm -Sy git go-pie
+
+# Prepare system for legacy package test
 RUN pacman --noconfirm -Sy ruby2.7
 
 RUN mkdir /go
