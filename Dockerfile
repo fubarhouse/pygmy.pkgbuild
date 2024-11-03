@@ -2,7 +2,7 @@ FROM archlinux as builder
 MAINTAINER Karl Hepworth
 
 RUN mkdir /app
-COPY . /app
+ADD . /app
 
 # Prepare system
 RUN pacman -Syu --noconfirm
