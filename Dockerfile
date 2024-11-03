@@ -1,8 +1,9 @@
 FROM archlinux as builder
 MAINTAINER Karl Hepworth
 
-RUN mkdir /app
-ADD . /app
+RUN mkdir -p /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild
+ADD . /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild
+RUN chmod -R 777 /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild
 
 # Prepare system
 RUN pacman -Syu --noconfirm
@@ -15,30 +16,27 @@ RUN chmod -R 777 /go
 RUN mkdir /.cache
 RUN chmod -R 777 /.cache
 
-# Build application
-RUN chmod -R 777 /app
-
 # Run One - Pygmy
-RUN cd /app/pygmy && \
+RUN cd /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild/pygmy && \
     sudo -u nobody makepkg -f
 
 # Run Two - Pygmy-Bin
-RUN cd /app/pygmy-bin && \
+RUN cd /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild/pygmy-bin && \
     sudo -u nobody makepkg -f
 
 # Run Three - Pygmy-Git
-RUN cd /app/pygmy-git && \
+RUN cd //home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild/pygmy-git && \
     sudo -u nobody makepkg -f \
 
 # Run Four - Pygmy-Git
-RUN cd /app/pygmy-static-bin && \
+RUN cd /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild/pygmy-static-bin && \
     sudo -u nobody makepkg -f
 
 # Run Five - Pygmy-Legacy
-RUN cd /app/pygmy-legacy && \
+RUN cd /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild/pygmy-legacy && \
    sudo -u nobody makepkg -f
 
 # Produce result
 FROM archlinux
-COPY --from=builder /app /app
+COPY --from=builder /home/runner/work/pygmy.pkgbuild/pygmy.pkgbuild/ /app
 WORKDIR /app
